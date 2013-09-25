@@ -5,7 +5,9 @@ Hadoop, Zookeeper, and Accumulo across any number of EC2 nodes, much
 more cleanly than Apache Whirr.
 
 To start a cluster, run python start_cluster.py
+
 To shutdown a running cluster, run ./shutdown_cluster.sh
+
 To update the Amazon AMI, run ./cook_ami.sh
 
 Note that these scripts use the old, more common EC2 API tools on Java, 
