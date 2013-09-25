@@ -1,0 +1,9 @@
+#!/usr/bin/expect -f
+# Tcl script to handle SSH Key Verification (Are you sure you want to connect?)
+spawn ssh -i [lindex $argv 1].pem ubuntu@[lindex $argv 0]
+expect {
+-re ".*Are.*.*yes.*no.*" {
+send "yes\r"
+exp_continue
+}
+}

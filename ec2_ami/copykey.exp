@@ -1,0 +1,8 @@
+#!/usr/bin/expect -f
+spawn scp -i [lindex $argv 1] .ssh/id_rsa.pub ubuntu@[lindex $argv 0]:/home/ubuntu
+expect { 
+-re ".*Are.*.*yes.*no.*" {
+send "yes\r"
+exp_continue
+}
+}

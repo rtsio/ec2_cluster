@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<configuration>
+<property>
+<name>dfs.name.dir</name>
+<value>/mnt/namenode</value>
+</property>
+<property>
+<name>dfs.data.dir</name>
+<value>/mnt/hdfs,/mnt2/hdfs</value>
+</property>
+<property>
+<name>dfs.replication</name>
+<value>1</value>
+</property>
+<property>
+<name>dfs.permissions</name>
+<value>false</value>
+</property>
+<property>
+<name>dfs.durable.sync</name>
+<value>true</value>
+</property>
+</configuration>

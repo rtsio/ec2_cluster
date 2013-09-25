@@ -1,0 +1,8 @@
+#!/usr/bin/expect -f
+spawn ssh [lindex $argv 0]
+expect { 
+-re ".*Are.*.*yes.*no.*" {
+send "yes\r"
+exp_continue
+}
+}

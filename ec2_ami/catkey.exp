@@ -1,0 +1,8 @@
+#!/usr/bin/expect -f
+spawn ssh -i [lindex $argv 1] ubuntu@[lindex $argv 0] cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
+expect { 
+-re ".*Are.*.*yes.*no.*" {
+send "yes\r"
+exp_continue
+}
+}
